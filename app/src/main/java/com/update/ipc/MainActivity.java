@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import com.update.ipc.aidl.AidlActivity;
 import com.update.ipc.bind_service.BindActivity;
 import com.update.ipc.messenger.MessengerActivity;
 
@@ -35,9 +36,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn1:
                 startActivity(new Intent(activity, MessengerActivity.class));
                 break;
-//            case R.id.btn2:
-//                startActivity(new Intent(activity, AidlActivity.class));
-//                break;
+            case R.id.btn2:
+                startActivity(new Intent(activity, AidlActivity.class));
+                break;
 //            case R.id.btn3:
 //                break;
         }
