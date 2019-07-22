@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".aidl.AidlActivity" />
+        <activity android:name=".bind_service.BindActivity" />
+        <activity android:name=".messenger.MessengerActivity" />
+
+        <service android:name=".aidl.AidlService" />
+        <service android:name=".bind_service.TestService" />
+        <service android:name=".messenger.ServerService" />
     </application>
 
 </manifest>
