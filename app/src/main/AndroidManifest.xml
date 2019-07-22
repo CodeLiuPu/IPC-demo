@@ -19,10 +19,12 @@
         <activity android:name=".aidl.AidlActivity" />
         <activity android:name=".bind_service.BindActivity" />
         <activity android:name=".messenger.MessengerActivity" />
+        <activity android:name=".binder_pool.BinderPoolActivity" />
 
         <service android:name=".aidl.AidlService" />
         <service android:name=".bind_service.TestService" />
         <service android:name=".messenger.ServerService" />
+        <service android:name=".binder_pool.BinderPoolService" />
     </application>
 
 </manifest>

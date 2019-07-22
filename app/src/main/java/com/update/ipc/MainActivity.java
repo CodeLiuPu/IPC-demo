@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.update.ipc.aidl.AidlActivity;
 import com.update.ipc.bind_service.BindActivity;
+import com.update.ipc.binder_pool.BinderPoolActivity;
 import com.update.ipc.messenger.MessengerActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -39,8 +40,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn2:
                 startActivity(new Intent(activity, AidlActivity.class));
                 break;
-//            case R.id.btn3:
-//                break;
+            case R.id.btn3:
+                startActivity(new Intent(activity, BinderPoolActivity.class));
+                break;
         }
     }
 
