@@ -2,12 +2,13 @@ package com.update.ipc;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
 import com.update.ipc.bind_service.BindActivity;
+import com.update.ipc.messenger.MessengerActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "Update TestService";
@@ -31,9 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn:
                 startActivity(new Intent(activity, BindActivity.class));
                 break;
-//            case R.id.btn1:
-//                startActivity(new Intent(activity, MessengerActivity.class));
-//                break;
+            case R.id.btn1:
+                startActivity(new Intent(activity, MessengerActivity.class));
+                break;
 //            case R.id.btn2:
 //                startActivity(new Intent(activity, AidlActivity.class));
 //                break;
