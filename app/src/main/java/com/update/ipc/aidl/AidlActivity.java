@@ -32,6 +32,7 @@ public class AidlActivity extends AppCompatActivity implements View.OnClickListe
             public void onServiceConnected(ComponentName name, IBinder service) {
                 iBook = IBook.Stub.asInterface(service);
                 log("onServiceConnected");
+                Log.e("update","update client binder " + iBook.toString());
             }
 
             @Override
