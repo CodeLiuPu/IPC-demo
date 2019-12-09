@@ -16,16 +16,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".aidl.AidlActivity" />
         <activity android:name=".bind_service.BindActivity" />
         <activity android:name=".messenger.MessengerActivity" />
         <activity android:name=".binder_pool.BinderPoolActivity" />
 
+        <activity android:name=".aidl.AidlActivity" />
         <service android:name=".aidl.AidlService"
             android:process=":son"/>
         <service android:name=".bind_service.TestService" />
         <service android:name=".messenger.ServerService" />
         <service android:name=".binder_pool.BinderPoolService" />
+
+        <activity android:name=".binder.BinderActivity" />
+
+        <service android:name=".binder.BinderService"
+            android:process=":son"/>
     </application>
 
 </manifest>

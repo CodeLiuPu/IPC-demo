@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.update.ipc.aidl.AidlActivity;
 import com.update.ipc.bind_service.BindActivity;
+import com.update.ipc.binder.BinderActivity;
 import com.update.ipc.binder_pool.BinderPoolActivity;
 import com.update.ipc.messenger.MessengerActivity;
 
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn1).setOnClickListener(this);
         findViewById(R.id.btn2).setOnClickListener(this);
         findViewById(R.id.btn3).setOnClickListener(this);
+        findViewById(R.id.btn4).setOnClickListener(this);
     }
 
     @Override
@@ -42,6 +44,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn3:
                 startActivity(new Intent(activity, BinderPoolActivity.class));
+                break;
+            case R.id.btn4:
+                startActivity(new Intent(activity, BinderActivity.class));
                 break;
         }
     }
