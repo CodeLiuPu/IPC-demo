@@ -14,7 +14,7 @@ import com.update.ipc.binder_pool.BinderPoolActivity;
 import com.update.ipc.messenger.MessengerActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private static final String TAG = "Update TestService";
+    private static final String TAG = "Update Main";
 
     Activity activity;
 

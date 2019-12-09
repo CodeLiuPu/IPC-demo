@@ -16,7 +16,7 @@ import com.update.ipc.R;
 
 
 public class AidlActivity extends AppCompatActivity implements View.OnClickListener {
-    private static final String TAG = "Update TestService";
+    private static final String TAG = "Update AidlService";
 
     Activity activity;
     ServiceConnection mConnection;

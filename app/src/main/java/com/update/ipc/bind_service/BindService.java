@@ -8,8 +8,8 @@ import android.util.Log;
 
 import com.blankj.rxbus.RxBus;
 
-public class TestService extends Service {
-    private static final String TAG = "Update TestService";
+public class BindService extends Service {
+    private static final String TAG = "Update BindService";
 
     private final IBinder mBinder = new TestBinder();
 
@@ -65,8 +65,8 @@ public class TestService extends Service {
     }
 
     class TestBinder extends Binder {
-        TestService getService(){
-            return TestService.this;
+        BindService getService(){
+            return BindService.this;
         }
     }
 }

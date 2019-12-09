@@ -16,7 +16,7 @@ import com.update.ipc.R;
 
 
 public class BinderActivity extends AppCompatActivity implements View.OnClickListener {
-    private static final String TAG = "Update TestService";
+    private static final String TAG = "Update BinderService";
 
     Activity activity;
     ServiceConnection mConnection;

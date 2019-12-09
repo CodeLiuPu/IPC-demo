@@ -18,7 +18,7 @@ import com.update.ipc.R;
 import java.text.SimpleDateFormat;
 
 public class MessengerActivity extends AppCompatActivity implements View.OnClickListener {
-    private static final String TAG = "Update TestService";
+    private static final String TAG = "Update MessengerService";
 
     private ServiceConnection serviceConnection;
     private Messenger serverMessenger;
@@ -57,14 +57,14 @@ public class MessengerActivity extends AppCompatActivity implements View.OnClick
             @Override
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
-                log("i have received " + msg.getData().getString(ServerService.KEY_MESSAGE));
+                log("i have received " + msg.getData().getString(MessengerService.KEY_MESSAGE));
                 Message message = Message.obtain();
                 Bundle bundle = new Bundle();
-                bundle.putString(ServerService.KEY_MESSAGE, "Ok bye");
+                bundle.putString(MessengerService.KEY_MESSAGE, "Ok bye");
                 message.setData(bundle);
-                log("i have send " + message.getData().getString(ServerService.KEY_MESSAGE));
+                log("i have send " + message.getData().getString(MessengerService.KEY_MESSAGE));
 
-                message.what = ServerService.KEY_DISCONN;
+                message.what = MessengerService.KEY_DISCONN;
 
                 if (null != serverMessenger) {
                     try {
@@ -83,10 +83,10 @@ public class MessengerActivity extends AppCompatActivity implements View.OnClick
         String currTime = simpleDateFormat.format(System.currentTimeMillis());
         Message message = Message.obtain();
         Bundle bundle = new Bundle();
-        bundle.putString(ServerService.KEY_MESSAGE, "i have send handler a message at " + currTime);
+        bundle.putString(MessengerService.KEY_MESSAGE, "i have send handler a message at " + currTime);
         message.setData(bundle);
-        log("i have send " + message.getData().getString(ServerService.KEY_MESSAGE));
-        message.what = ServerService.KEY_CONN;
+        log("i have send " + message.getData().getString(MessengerService.KEY_MESSAGE));
+        message.what = MessengerService.KEY_CONN;
         message.replyTo = messenger;
         if (null != serverMessenger) {
             try {
@@ -104,7 +104,7 @@ public class MessengerActivity extends AppCompatActivity implements View.OnClick
                 if (!hasBindService) {
                     Intent intent = new Intent();
                     String packageName = "com.update.messengerdemo";
-                    String className = packageName + ".ServerService";
+                    String className = packageName + ".MessengerService";
                     intent.setClassName(packageName, className);
                     bindService(intent, serviceConnection, BIND_AUTO_CREATE);
                     hasBindService = true;

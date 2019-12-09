@@ -23,8 +23,8 @@
         <activity android:name=".aidl.AidlActivity" />
         <service android:name=".aidl.AidlService"
             android:process=":son"/>
-        <service android:name=".bind_service.TestService" />
-        <service android:name=".messenger.ServerService" />
+        <service android:name=".bind_service.BindService" />
+        <service android:name=".messenger.MessengerService" />
         <service android:name=".binder_pool.BinderPoolService" />
 
         <activity android:name=".binder.BinderActivity" />

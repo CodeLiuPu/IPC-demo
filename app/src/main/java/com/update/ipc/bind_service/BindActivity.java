@@ -15,7 +15,7 @@ import com.update.ipc.R;
 
 
 public class BindActivity extends AppCompatActivity implements View.OnClickListener {
-    private static final String TAG = "Update TestService";
+    private static final String TAG = "Update BindService";
 
     Activity activity;
     ServiceConnection mConnection;
@@ -28,9 +28,9 @@ public class BindActivity extends AppCompatActivity implements View.OnClickListe
         mConnection = new ServiceConnection() {
             @Override
             public void onServiceConnected(ComponentName name, IBinder service) {
-                TestService.TestBinder  testBinder = (TestService.TestBinder) service;
-                TestService testService = testBinder.getService();
-                log("onServiceConnected " +testService.getName());
+                BindService.TestBinder  testBinder = (BindService.TestBinder) service;
+                BindService bindService = testBinder.getService();
+                log("onServiceConnected " + bindService.getName());
             }
 
             @Override
@@ -46,7 +46,7 @@ public class BindActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(activity, TestService.class);
+        Intent intent = new Intent(activity, BindService.class);
         switch (v.getId()) {
             case R.id.btn:
                 startService(intent);

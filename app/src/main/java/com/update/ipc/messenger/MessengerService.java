@@ -11,8 +11,8 @@ import android.os.RemoteException;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-public class ServerService extends Service {
-    private static final String TAG = "Update TestService";
+public class MessengerService extends Service {
+    private static final String TAG = "Update MessengerService";
 
     public static final String KEY_MESSAGE = "message";
     public static final int KEY_CONN = 1;
